@@ -8,12 +8,25 @@
 
 >[PyTorch GitHub](https://github.com/pytorch/pytorch)
 
+### PyTorch libraries install 
 
+
+
+PyTorch         |      Use
+--------------- |---------------
+torch           |     nn
+torchaudio      |     audio
+torchvision     |     images
+
+
+## Demo
+
+Importing torch library
 
 ```python
 import torch
 ```
-
+Empty tensor
 
 ```python
 x = torch.empty(2)
@@ -21,7 +34,7 @@ x = torch.empty(2)
 > tensor([1.8331e-40, 0.0000e+00])
 
 
-
+Random tensor
 
 ```python
 x = torch.rand(2)
@@ -29,14 +42,14 @@ x = torch.rand(2)
 >tensor([[0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00],
         [0.0000e+00, 0.0000e+00, 4.2531e-05, 1.0802e-05]])
 
-
+Zeros tensor
 
 ```python
 x = torch.zeros(2)
 ```
 >tensor([0., 0.])
 
-
+Ones tensor
 ```python
 x = torch.ones(2)
 ```
@@ -58,13 +71,11 @@ x.size()
 
 ```python
 x = torch.tensor([2.5,0.1])
-x
 ```
 >tensor([2.5000, 0.1000])
 
 ```python
 y=torch.tensor([4.9,4.3])
-y
 ```
 >tensor([4.9000, 4.3000])
 
@@ -113,16 +124,21 @@ x
         [0.9947, 0.1444, 0.0529, 0.8653],
         [0.9795, 0.6218, 0.5568, 0.8080],
         [0.5672, 0.0596, 0.5012, 0.3082]])
-        
+   
+  
+Slicing operation
 ```python
 x[:,0]
 ```
 > tensor([0.3094, 0.4614, 0.9947, 0.9795, 0.5672])
 
+
 ```python
 x[0,:]
 ```
 > tensor([0.3094, 0.3055, 0.9537, 0.1301])
+
+use item() if you have single value it will print seprate value pure number
 
 ```python
 x[1,1].item()
@@ -130,7 +146,7 @@ x[1,1].item()
 > 0.6939277052879333
 
 ```python
-#use item() if you have single value it will print seprate value pure number
+#
 
 #reshaping
 
@@ -186,9 +202,11 @@ x.view(8,-1)
 
 
 
-```
-#numpy to tensor and vice versa
-```
+
+- Converting Tensor to Numpy and Vice-Versa
+
+Importing numpy
+
 ```python
 import numpy as np
 ```
@@ -200,7 +218,7 @@ a
 >tensor([1., 1., 1., 1., 1.])
 
 ```python
-b=a.numpy()
+b = a.numpy()
 type(b)
 ```
 > numpy.ndarray
@@ -216,35 +234,19 @@ a
 ```
 > array([1., 1., 1., 1., 1.])
 
+
 ```python
 b = torch.from_numpy(a)
 b
 ```
 > tensor([1., 1., 1., 1., 1.], dtype=torch.float64)
 
+
+To check if you have cuda install for GPU operation
 ```python
 'gpu' if torch.cuda.is_available() else 'cpu'
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
