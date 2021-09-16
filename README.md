@@ -1,6 +1,7 @@
 # PyTorch
 
-![download-removebg-preview](https://user-images.githubusercontent.com/58439868/133603612-7096b97c-5ce5-47d3-ad65-84ff1b6b2d54.png)
+
+![Pytorch_logo](https://user-images.githubusercontent.com/58439868/133604410-de7e686c-c683-4239-8020-616b8cc304cb.png)
 
 
 >[PyTorch](https://pytorch.org/)
@@ -49,107 +50,106 @@ x.dtype
 ```
 >torch.float32
 
-
-```python
-x = torch.ones(2,dtype=float64)
-x.dtype
 ```
->torch.float64
-
-
-```python
-import torch
+x = torch.ones(2,4)
+x.size()
 ```
-
-
-
-```python
-import torch
 ```
-
-
-
-```python
-import torch
+x = torch.tensor([2.5,0.1])
+x
 ```
-
-
-
-```python
-import torch
 ```
-
-
-
-```python
-import torch
+y=torch.tensor([4.9,4.3])
+y
 ```
-
-
-
-```python
-import torch
 ```
-
-
-
-```python
-import torch
+z = x+y
+z
 ```
-
-
-
-```python
-import torch
 ```
-
-
-
-```python
-import torch
+y.add_(x)
 ```
-
-
-
-```python
-import torch
 ```
-
-
-
-```python
-import torch
+x.add_(y)
+#underscore used to inplace operation 
 ```
+x
 
-
-
-```python
-import torch
+y
 ```
+z= torch.sub(x,y)
 
-
-
-```python
-import torch
+z
 ```
+```
+x.sub_(y)
+```
+```
+x = torch.rand(5,4)
+x
+```
+```
+x[:,0]
+```
+```
+x[0,:]
+```
+```
+x[1,1].item()
+```
+```
+#use item() if you have single value it will print seprate value pure number
 
+#reshaping
 
-
-```python
-import torch
+x=torch.rand(4,4)
+x
+```
+```
+x.view(16)
+```
+```
+x.view(-1,8)
+```
+```
+x.view(8,2)
+```
+```
+x.view(8,-1)
+```
+```
+#numpy to tensor and vice versa
+```
+```
+import numpy as np
+```
+```
+a = torch.ones(5)
+a
+```
+```
+b=a.numpy()
+```
+```
+type(a)
+```
+```
+type(b)
 ```
 
 
+```
+a = np.ones(5)
+a
+```
+```
+b = torch.from_numpy(a)
+b
+```
+```
+'gpu' if torch.cuda.is_available() else 'cpu'
 
-
-
-
-
-
-
-
-
-
+```
 
 
 
