@@ -4,6 +4,7 @@
 ![Pytorch_logo](https://user-images.githubusercontent.com/58439868/133604410-de7e686c-c683-4239-8020-616b8cc304cb.png)
 
 
+
 >[PyTorch](https://pytorch.org/)
 
 >[PyTorch GitHub](https://github.com/pytorch/pytorch)
@@ -257,7 +258,7 @@ b
 'gpu' if torch.cuda.is_available() else 'cpu'
 
 ```
-
+..
 
 
 
